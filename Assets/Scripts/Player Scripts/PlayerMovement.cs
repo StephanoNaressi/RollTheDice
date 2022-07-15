@@ -26,7 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 _modifiedCastPosition = new Vector3(transform.position.x, transform.position.y - .3f, transform.position.z);
+
+        Vector3 _modifiedCastPosition = new Vector3(transform.position.x, transform.position.y + .3f, transform.position.z);
         RaycastHit2D hit = Physics2D.Raycast(_modifiedCastPosition, Vector2.down, 1f);
         if (hit.collider != null && hit.collider.tag == "Floor")
         {
