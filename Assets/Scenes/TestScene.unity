@@ -277,6 +277,7 @@ GameObject:
   - component: {fileID: 493234185}
   - component: {fileID: 493234184}
   - component: {fileID: 493234186}
+  - component: {fileID: 493234187}
   m_Layer: 0
   m_Name: Felix
   m_TagString: Player
@@ -351,6 +352,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   jumpVelocity: 1
+--- !u!114 &493234187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493234182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ae90166dc146d94db285301b1d99315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2.5
+  rb: {fileID: 493234184}
 --- !u!1 &733148618
 GameObject:
   m_ObjectHideFlags: 0
