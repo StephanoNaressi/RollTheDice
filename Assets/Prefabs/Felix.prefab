@@ -94,6 +94,7 @@ MonoBehaviour:
     targetStanceLocation: 0
     isRight: 0
     isDead: 0
+  spriteObject: {fileID: 0}
 --- !u!114 &8938070950174833556
 MonoBehaviour:
   m_ObjectHideFlags: 0
