@@ -11,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
     public Enemy enemy;
 
     bool _onGround = true;
+
+    [SerializeField]
+    GameObject spriteObject;
     
     
 
@@ -20,6 +23,14 @@ public class PlayerMovement : MonoBehaviour
         //stop player movement input during combat sequence
         if (!inCombat)
         {
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                spriteObject.transform.localScale = new Vector3(.25f, spriteObject.transform.localScale.y, spriteObject.transform.localScale.z);
+            } else if (Input.GetAxis("Horizontal") < 0)
+            {
+                spriteObject.transform.localScale = new Vector3(-.25f , spriteObject.transform.localScale.y, spriteObject.transform.localScale.z);
+            }
+
             //player movement
             transform.Translate(new Vector3(Input.GetAxis("Horizontal"), 0, 0) * speed * Time.deltaTime);
 

@@ -25,13 +25,20 @@ public class EnemyInfo : MonoBehaviour
     [SerializeField]
     List<Sprite> healthDice = new List<Sprite>();
 
+    [SerializeField]
+    Canvas enemyCanvas;
+
     private void Start()
     {
         //presets combat distance for animation
         if (enemy.isRight)
         {
             enemy.targetStanceLocation = transform.position.x + 2.75f;
-        } else
+            transform.localScale = new Vector3(-1f, transform.localScale.y, transform.localScale.z);
+            enemyCanvas.transform.localScale = new Vector3(-1f, enemyCanvas.transform.localScale.y, enemyCanvas.transform.localScale.z);
+
+        }
+        else
         {
             enemy.targetStanceLocation = transform.position.x - 2.75f;
         }

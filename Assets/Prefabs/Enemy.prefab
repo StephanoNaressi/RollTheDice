@@ -250,7 +250,6 @@ GameObject:
   - component: {fileID: 1830662292549448622}
   - component: {fileID: 1830662292549448616}
   - component: {fileID: 1830662292549448618}
-  - component: {fileID: 1830662292549448619}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
@@ -325,7 +324,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.936584, y: -0.30685568}
+  m_Offset: {x: -2, y: -0.3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -377,15 +376,6 @@ MonoBehaviour:
   - {fileID: -571210030, guid: dd490321d82bc0c4bb4595d7037d4c33, type: 3}
   - {fileID: 1960781979, guid: dd490321d82bc0c4bb4595d7037d4c33, type: 3}
   - {fileID: 56733382, guid: dd490321d82bc0c4bb4595d7037d4c33, type: 3}
---- !u!114 &1830662292549448619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830662292549448620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4162ced2dd9b70540b0138b12dcad01c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  spriteObject: {fileID: 1830662292251617961}
+  combatTriggerCollider: {fileID: 1830662292549448616}
+  enemyCanvas: {fileID: 1830662291739865364}
