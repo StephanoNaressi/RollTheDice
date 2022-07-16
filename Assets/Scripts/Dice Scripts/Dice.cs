@@ -5,6 +5,7 @@ using System;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+//Class to hold all information about our dice
 [Serializable]
 public class Die
 {
@@ -23,6 +24,7 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 {
     public Die die;
 
+    //Rolls and sets our dices value
     public void RollDie()
     {
         if (!die.rolled)

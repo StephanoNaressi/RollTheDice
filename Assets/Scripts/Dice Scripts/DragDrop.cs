@@ -19,7 +19,8 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
-   public void OnEndDrag(PointerEventData eventData)
+    //When Drag is ended verify dice was dropped into a box if not return it to original location
+    public void OnEndDrag(PointerEventData eventData)
     {
         if (!dice.die.used)
         {
@@ -29,6 +30,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         canvasGroup.blocksRaycasts = true;
     }
 
+    //When dragged keep UI element on cursor
     public void OnDrag(PointerEventData eventData)
     {
         if (dice.die.rolled && !dice.die.used)

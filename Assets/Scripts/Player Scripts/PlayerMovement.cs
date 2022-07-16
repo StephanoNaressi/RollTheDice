@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 1f;
-    public float jumpVelocity = 1f;
+    public float speed = 0f;
+    public float jumpVelocity = 0f;
 
     bool _onGround = true;
 
@@ -26,9 +26,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-
+        //Tests player is on ground to prevent flight
+        //_modifiedCastPosition moves the cast up to prevent the cast from passing through collieder below
         Vector3 _modifiedCastPosition = new Vector3(transform.position.x, transform.position.y + .3f, transform.position.z);
-        RaycastHit2D hit = Physics2D.Raycast(_modifiedCastPosition, Vector2.down, 1f);
+        RaycastHit2D hit = Physics2D.Raycast(_modifiedCastPosition, Vector2.down, .5f);
         if (hit.collider != null && hit.collider.tag == "Floor")
         {
             _onGround = true;
