@@ -41,6 +41,11 @@ public class SoundManager : MonoBehaviour
         _isDone = true;
     }
 
+    private void Start()
+    {
+        PlaySound("GameTheme");
+        PlaySound("Ambience");
+    }
 
     private void Update()
     {
