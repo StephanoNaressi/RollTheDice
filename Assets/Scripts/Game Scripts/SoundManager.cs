@@ -10,6 +10,9 @@ public class SoundManager : MonoBehaviour
 
     public Sound[] sounds;
 
+    bool _LastSceneMenu;
+    bool _isMenu;
+
     private void Awake()
     {
         if(Instance == null)
@@ -33,15 +36,36 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        PlaySound("GameTheme");
-        PlaySound("Ambience");
-    }
 
     private void Update()
     {
-        
+
+        /*if (_isMenu)
+        {
+            _LastSceneMenu = true;
+        } else
+        {
+            _LastSceneMenu = false;
+        }
+
+        if (SceneManager.GetActiveScene().name == "StartingScene" || SceneManager.GetActiveScene().name == "Level Select")
+        {
+            _isMenu = true;
+        } else
+        {
+            _isMenu = false;
+        }
+
+
+
+        if (GameObject.FindGameObjectWithTag("GameManager") && _LastSceneMenu)
+        {
+            PlaySound("GameTheme");
+            PlaySound("Ambience");
+        } else if (!GameObject.FindGameObjectWithTag("GameManager"))
+        {
+            PlaySound("GameThemeMenu");
+        }*/
     }
 
     public void PlaySound(string name)
