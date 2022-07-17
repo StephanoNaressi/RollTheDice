@@ -28,11 +28,28 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 {
     public Die die;
 
+    bool _playOnce;
+
     private void Start()
     {
-        FindObjectOfType<SoundManager>().PlaySound("RollingDice");
+        if (FindObjectOfType<SoundManager>()._isDone)
+        {
+            FindObjectOfType<SoundManager>().PlaySound("RollingDice");
+            _playOnce = false;
+        }
     }
 
+    private void Update()
+    {
+        if (_playOnce)
+        {
+            if (FindObjectOfType<SoundManager>())
+            {
+                FindObjectOfType<SoundManager>().PlaySound("RollingDice");
+                _playOnce = false;
+            }
+        }
+    }
     //Rolls and sets our dices value
     public void RollDie()
     {

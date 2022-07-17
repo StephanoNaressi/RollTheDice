@@ -10,8 +10,11 @@ public class SoundManager : MonoBehaviour
 
     public Sound[] sounds;
 
+    public bool _isDone = false;
+
     bool _LastSceneMenu;
     bool _isMenu;
+    
 
     private void Awake()
     {
@@ -34,6 +37,8 @@ public class SoundManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+
+        _isDone = true;
     }
 
 
