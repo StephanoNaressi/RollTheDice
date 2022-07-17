@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
         } else
         {
             Debug.Log("Player Death. End Game.");
+            player.GetComponent<PlayerAnimationController>().PlayPlayerDeath();
         }
     }
 
