@@ -13,7 +13,7 @@ public class Die
     public int maxRoll;
     public List<Sprite> possibleFaces = new List<Sprite>();
 
-    
+    [HideInInspector]
     public int value;
     [HideInInspector]
     public bool rolled = false;

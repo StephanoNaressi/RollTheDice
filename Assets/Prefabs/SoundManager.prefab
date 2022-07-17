@@ -47,19 +47,31 @@ MonoBehaviour:
   sounds:
   - name: DiceDragDrop
     clip: {fileID: 8300000, guid: b0d7145035a7e6b45a84c577ad7bcb58, type: 3}
-    volume: 0.5
+    volume: 0.7
     pitch: 1.08
+    loop: 0
+    source: {fileID: 0}
+  - name: DiceDragDropReturn
+    clip: {fileID: 8300000, guid: a38b3043cb2556048accd115b34323c3, type: 3}
+    volume: 0.7
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: DiceEndRoll
     clip: {fileID: 8300000, guid: 03ca5cd21a82e5846a7967a73d9d365a, type: 3}
-    volume: 0.5
+    volume: 0.3
     pitch: 1.08
     loop: 0
     source: {fileID: 0}
   - name: RollingDice
     clip: {fileID: 8300000, guid: 8cbb16b4bd2753c429012ac211a4b494, type: 3}
-    volume: 0.5
-    pitch: 1.08
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: GameTheme
+    clip: {fileID: 8300000, guid: 0643f2ebb8204a34381b37edb906215a, type: 3}
+    volume: 0.9
+    pitch: 1
     loop: 1
     source: {fileID: 0}

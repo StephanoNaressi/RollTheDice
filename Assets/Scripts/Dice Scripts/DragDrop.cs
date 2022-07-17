@@ -26,6 +26,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         if (!dice.die.used)
         {
             rectTransform.anchoredPosition = originalAnchorPoint;
+            FindObjectOfType<SoundManager>().PlaySound("DiceDragDropReturn");
         }
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;

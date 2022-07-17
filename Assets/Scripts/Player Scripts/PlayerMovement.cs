@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
+    [HideInInspector]
     public int speed = 0;
-    
+    [HideInInspector]
     public int jumpVelocity = 0;
-    
+    [HideInInspector]
     public int attackStrength = 0;
     [HideInInspector]
     public bool inCombat = false;
