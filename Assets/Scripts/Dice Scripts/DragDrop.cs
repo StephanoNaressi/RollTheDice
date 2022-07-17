@@ -11,6 +11,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     [SerializeField] Dice dice;
     Vector2 originalAnchorPoint;
 
+
     private void Awake()
     {
         canvas = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>();
@@ -49,6 +50,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         {
             canvasGroup.alpha = .6f;
             canvasGroup.blocksRaycasts = false;
+            FindObjectOfType<SoundManager>().PlaySound("DiceDragDrop");
         }
         else
         {

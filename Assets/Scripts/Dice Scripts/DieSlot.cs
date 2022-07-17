@@ -5,8 +5,13 @@ using UnityEngine.EventSystems;
 
 public class DieSlot : MonoBehaviour, IDropHandler
 {
+    [HideInInspector]
     public int slotDieValue = -1;
+    [HideInInspector]
     public bool newValueAdded = false;
+
+    [SerializeField]
+    AudioClip _diceDragDropClip;
 
     //When a die is dropped into the box it is read allowing the box to hold the dices' value
     public void OnDrop(PointerEventData eventData)
@@ -19,6 +24,8 @@ public class DieSlot : MonoBehaviour, IDropHandler
                 eventData.pointerDrag.GetComponent<Dice>().die.used = true;
                 slotDieValue = eventData.pointerDrag.GetComponent<Dice>().die.value;
                 newValueAdded = true;
+
+                FindObjectOfType<SoundManager>().PlaySound("DiceDragDrop");
             }
             else
             {

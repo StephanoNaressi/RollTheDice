@@ -13,9 +13,13 @@ public class Die
     public int maxRoll;
     public List<Sprite> possibleFaces = new List<Sprite>();
 
+    
     public int value;
+    [HideInInspector]
     public bool rolled = false;
+    [HideInInspector]
     public bool used = false;
+    [HideInInspector]
     public Image image;
 }
 
@@ -24,11 +28,20 @@ public class Dice : MonoBehaviour, IPointerClickHandler
 {
     public Die die;
 
+    private void Start()
+    {
+        FindObjectOfType<SoundManager>().PlaySound("RollingDice");
+    }
+
     //Rolls and sets our dices value
     public void RollDie()
     {
         if (!die.rolled)
         {
+            FindObjectOfType<SoundManager>().PlaySound("DiceEndRoll");
+            GetComponent<Animator>().enabled = false;
+
+
             int rolledDie = UnityEngine.Random.Range(1, die.maxRoll);
             die.value = rolledDie;
             die.rolled = true;

@@ -9,8 +9,10 @@ using System;
 public class Enemy
 {
     public int health;
+    [HideInInspector]
     public float targetStanceLocation;
     public bool isRight;
+    [HideInInspector]
     public bool isDead;
     
 }

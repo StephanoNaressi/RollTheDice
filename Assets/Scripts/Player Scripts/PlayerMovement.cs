@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    
     public int speed = 0;
+    
     public int jumpVelocity = 0;
+    
     public int attackStrength = 0;
+    [HideInInspector]
     public bool inCombat = false;
+    [HideInInspector]
     public Enemy enemy;
 
     bool _onGround = true;
