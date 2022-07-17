@@ -35,6 +35,7 @@ public class SoundManager : MonoBehaviour
     private void Start()
     {
         PlaySound("GameTheme");
+        PlaySound("Ambience");
     }
 
     public void PlaySound(string name)

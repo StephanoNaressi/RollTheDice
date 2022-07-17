@@ -780,6 +780,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5307689810026654246, guid: 7b7d478f9319f524095b4a6e18d9f2f2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 42469707b1dbb5d4ea3245547be51ba5, type: 2}
     - target: {fileID: 8938070950174833557, guid: 7b7d478f9319f524095b4a6e18d9f2f2, type: 3}
       propertyPath: spriteObject
       value: 
