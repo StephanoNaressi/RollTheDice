@@ -19,7 +19,7 @@ public class Die
     public bool rolled = false;
     [HideInInspector]
     public bool used = false;
-    [HideInInspector]
+
     public Image image;
 }
 

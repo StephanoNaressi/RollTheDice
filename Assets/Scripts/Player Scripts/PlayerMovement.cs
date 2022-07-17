@@ -14,13 +14,18 @@ public class PlayerMovement : MonoBehaviour
     public bool inCombat = false;
     [HideInInspector]
     public Enemy enemy;
+    [HideInInspector]
+    public bool isAlive = true;
 
     bool _onGround = true;
 
     [SerializeField]
     GameObject spriteObject;
-    
-    
+
+    [SerializeField]
+    Animator animator;
+
+
 
     // Update is called once per frame
     void Update()
@@ -28,24 +33,35 @@ public class PlayerMovement : MonoBehaviour
         //stop player movement input during combat sequence
         if (!inCombat)
         {
-            if (Input.GetAxis("Horizontal") > 0)
+            if (isAlive)
             {
-                spriteObject.transform.localScale = new Vector3(.25f, spriteObject.transform.localScale.y, spriteObject.transform.localScale.z);
-            } else if (Input.GetAxis("Horizontal") < 0)
-            {
-                spriteObject.transform.localScale = new Vector3(-.25f , spriteObject.transform.localScale.y, spriteObject.transform.localScale.z);
+                if (Input.GetAxis("Horizontal") > 0)
+                {
+                    spriteObject.transform.localScale = new Vector3(.25f, spriteObject.transform.localScale.y, spriteObject.transform.localScale.z);
+                    animator.SetBool("isRunning", true);
+                }
+                else if (Input.GetAxis("Horizontal") < 0)
+                {
+                    spriteObject.transform.localScale = new Vector3(-.25f, spriteObject.transform.localScale.y, spriteObject.transform.localScale.z);
+                    animator.SetBool("isRunning", true);
+                }
+                else
+                {
+                    animator.SetBool("isRunning", false);
+                }
+
+                //player movement
+                transform.Translate(new Vector3(Input.GetAxis("Horizontal"), 0, 0) * speed * Time.deltaTime);
+
+                //player jump
+                if (Input.GetButtonDown("Jump") && _onGround)
+                {
+
+                    GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpVelocity;
+
+                }
             }
-
-            //player movement
-            transform.Translate(new Vector3(Input.GetAxis("Horizontal"), 0, 0) * speed * Time.deltaTime);
-
-            //player jump
-            if (Input.GetButtonDown("Jump") && _onGround)
-            {
-
-                GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpVelocity;
-
-            }
+            
         }
         else
         {
@@ -79,6 +95,11 @@ public class PlayerMovement : MonoBehaviour
         {
             inCombat = true;
             enemy = collision.gameObject.GetComponent<EnemyInfo>().enemy;
+        }
+
+        if(collision.tag == "DeathPit")
+        {
+            GetComponent<PlayerAnimationController>().PlayPlayerDeath();
         }
     }
 }

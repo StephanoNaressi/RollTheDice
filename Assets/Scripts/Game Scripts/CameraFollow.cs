@@ -23,7 +23,11 @@ public class CameraFollow : MonoBehaviour
         }
         else
         {
-            transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 3, -10);
+            if (player.GetComponent<PlayerMovement>().isAlive)
+            {
+                transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 3, -10);
+            }
+            
         }
     }
 }

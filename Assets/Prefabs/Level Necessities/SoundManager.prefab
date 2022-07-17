@@ -81,3 +81,15 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: LeftFootstep
+    clip: {fileID: 8300000, guid: 3f9b9fb127dfb5d48b648dd4bdd66b00, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: RightFootstep
+    clip: {fileID: 8300000, guid: b77cbedff9a2dfd4089f52adcc9d3f6c, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

@@ -9,6 +9,9 @@ TagManager:
   - Canvas
   - Die Slot
   - Enemy
+  - DeathPit
+  - Door
+  - SceneManager
   layers:
   - Default
   - TransparentFX
