@@ -401,6 +401,7 @@ GameObject:
   - component: {fileID: 538464991}
   - component: {fileID: 538464990}
   - component: {fileID: 538464989}
+  - component: {fileID: 538464992}
   m_Layer: 5
   m_Name: Level 3
   m_TagString: Untagged
@@ -473,10 +474,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5123627908581346686}
-        m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 5
+      - m_Target: {fileID: 538464992}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: OnPress
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -523,6 +524,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538464987}
   m_CullTransparentMesh: 1
+--- !u!114 &538464992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538464987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4161bab6425fdfd499d3c141c0cffb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SceneName: Level 3
 --- !u!1 &573694759
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +768,7 @@ GameObject:
   - component: {fileID: 1102250522}
   - component: {fileID: 1102250521}
   - component: {fileID: 1102250520}
+  - component: {fileID: 1102250523}
   m_Layer: 5
   m_Name: Level 1
   m_TagString: Untagged
@@ -826,10 +841,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5123627908581346686}
-        m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 5
+      - m_Target: {fileID: 1102250523}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: OnPress
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -876,6 +891,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102250518}
   m_CullTransparentMesh: 1
+--- !u!114 &1102250523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102250518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4161bab6425fdfd499d3c141c0cffb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SceneName: Level 1
 --- !u!1 &1182467999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,6 +1257,7 @@ GameObject:
   - component: {fileID: 1724873806}
   - component: {fileID: 1724873805}
   - component: {fileID: 1724873804}
+  - component: {fileID: 1724873807}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -1301,10 +1330,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5123627908581346686}
-        m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 5
+      - m_Target: {fileID: 1724873807}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: OnPress
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1351,6 +1380,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1724873802}
   m_CullTransparentMesh: 1
+--- !u!114 &1724873807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724873802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4161bab6425fdfd499d3c141c0cffb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SceneName: StartScene
 --- !u!1 &1787229155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1633,6 +1675,7 @@ GameObject:
   - component: {fileID: 1903729469}
   - component: {fileID: 1903729468}
   - component: {fileID: 1903729467}
+  - component: {fileID: 1903729470}
   m_Layer: 5
   m_Name: Level 2
   m_TagString: Untagged
@@ -1705,10 +1748,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5123627908581346686}
-        m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 5
+      - m_Target: {fileID: 1903729470}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: OnPress
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1755,6 +1798,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903729465}
   m_CullTransparentMesh: 1
+--- !u!114 &1903729470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903729465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4161bab6425fdfd499d3c141c0cffb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SceneName: Level 2
 --- !u!1001 &5123627908581346685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1812,14 +1868,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58d95efe52e9bae4e95614ea3ad54be7, type: 3}
---- !u!114 &5123627908581346686 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8646636088609612421, guid: 58d95efe52e9bae4e95614ea3ad54be7, type: 3}
-  m_PrefabInstance: {fileID: 5123627908581346685}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c16495fd3c8dbcb46b24f7c3be563698, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
