@@ -1091,6 +1091,7 @@ GameObject:
   - component: {fileID: 1863578261}
   - component: {fileID: 1863578264}
   - component: {fileID: 1863578262}
+  - component: {fileID: 1863578265}
   m_Layer: 5
   m_Name: Level Select
   m_TagString: Untagged
@@ -1163,10 +1164,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5123627908581346686}
-        m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 5
+      - m_Target: {fileID: 1863578265}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: OnPress
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1183,6 +1184,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863578260}
   m_CullTransparentMesh: 1
+--- !u!114 &1863578265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863578260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4161bab6425fdfd499d3c141c0cffb05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SceneName: Level Select
 --- !u!1 &1949042237
 GameObject:
   m_ObjectHideFlags: 0
